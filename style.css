@@ -1,0 +1,91 @@
+/* Temel Ayarlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6; /* Çok hafif gri/mavi arka plan */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Konteyner: İçeriği ortalar */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header ve Footer Stilleri */
+header, footer {
+    background-color: #1a252f; /* Koyu lacivert/siyah */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #f1c40f; /* Thor'un altınımsı sarısı */
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+/* Karakter Grid Yapısı (Duyarlı Dizilim) */
+.character-grid {
+    display: grid;
+    /* Kutular en az 280px olsun, sığdığı kadar yan yana dizilsin */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Kutular arası boşluk */
+    padding: 20px 0;
+}
+
+/* Karakter Kutusu (Card) Stilleri */
+.character-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mouse ile üzerine gelindiğinde (Hover) efekt */
+.character-card:hover {
+    transform: translateY(-8px); /* Yukarı doğru kaldır */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Gölgeyi belirginleştir */
+}
+
+/* Karakter Resmi Stilleri */
+.character-img {
+    width: 100%;
+    height: 350px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmi sığdırmak için kırp */
+    border-bottom: 3px solid #eee;
+}
+
+/* Karakter Bilgi Alanı */
+.character-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.character-info h3 {
+    font-size: 1.6rem;
+    color: #2980b9; /* Thor'un pelerini/şimşeği için mavi */
+    margin-bottom: 8px;
+}
+
+.character-info p {
+    font-size: 1.1rem;
+    color: #95a5a6; /* Gerçek isim için gri */
+    font-style: italic;
+}
